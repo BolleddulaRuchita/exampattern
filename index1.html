@@ -2,30 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport">
     <title>Document</title>
 </head>
 <body>
     <fieldset>
         General knowledge Test
         <fieldset>1)solve the following 2+2*2<br>
-            <form action=""><label for="">options</label><br>
-                <input type="radio" name="" id="">6 <br>
-                <input type="radio" name="" id="">2 <br>
-                <input type="radio" name="" id="">8 <br>
+            <form action=""id="a" ><label for="">options</label><br>
+                <input type="radio" name="a1" id="">6 <br>
+                <input type="radio" name="a1" id="">2 <br>
+                <input type="radio" name="a1" id="">8 <br>
+                <input type="submit" name="a1" id="">
                 <form action="">
                     <input type="reset" value="reset">
                 </form>
             </form>
-           
-
         </fieldset> <br>
 
-        <fieldset>2)solve the following 10*10*10<br>
-            <form action=""><label for="">options</label><br>
-                <input type="radio" name="" id="">10 <br>
-                <input type="radio" name="" id="">100 <br>
-                <input type="radio" name="" id="">100 <br>
+        <fieldset>2)solve the following 10*10*1<br>
+            <form action="" id="b"><label for="">options</label><br>
+                <input type="radio" name="b1" id="">10 <br>
+                <input type="radio" name="b1" id="">100 <br>
+                <input type="radio" name="b1" id="">1000 <br>
+                <input type="submit" name="b1" id="">
                 <form action="">
                     <input type="reset" value="reset">
                 </form>
@@ -33,10 +33,11 @@
             
         </fieldset><br>
         <fieldset>3)solve the following 5^5^5<br>
-            <form action=""><label for="">options</label><br>
-                <input type="radio" name="" id="">25<br>
-                <input type="radio" name="" id="">125 <br>
-                <input type="radio" name="" id="">100 <br>
+            <form action="" id="c"><label for="">options</label><br>
+                <input type="radio" name="c1" id="">25<br>
+                <input type="radio" name="c1" id="">125 <br>
+                <input type="radio" name="c1" id="">100 <br>
+                <input type="submit" name="c1" id="">
                 <form action="">
                     <input type="reset" value="reset">
                 </form>
@@ -44,10 +45,11 @@
             
         </fieldset> <br>
         <fieldset>4)solve the following 55-50+50<br>
-            <form action=""><label for="">options</label><br>
-                <input type="radio" name="" id="">155<br>
-                <input type="radio" name="" id="">55 <br>
-                <input type="radio" name="" id="">105 <br>
+            <form action="" id="d"><label for="">options</label><br>
+                <input type="radio" name="d1" id="">155<br>
+                <input type="radio" name="d1" id="">55 <br>
+                <input type="radio" name="d1" id="">105 <br>
+                <input type="submit" name="d1" id="">
                 <form action="">
                     <input type="reset" value="reset">
                 </form>
@@ -55,17 +57,27 @@
             
         </fieldset> <br>
         <fieldset>5)solve the following 10*10-10<br>
-            <form action=""><label for="">options</label><br>
-                <input type="radio" name="" id="">10 <br>
-                <input type="radio" name="" id="">100 <br>
-                <input type="radio" name="" id="">90 <br>
+            <form action="" id="e"><label for="">options</label><br>
+                <input type="radio" name="e1" id="">10 <br>
+                <input type="radio" name="e1" id="">100 <br>
+                <input type="radio" name="e1" id="">90 <br>
+                <input type="submit" name="e1" id="">
                 <form action="">
                     <input type="reset" value="reset">
                 </form>
             </form>
             
         </fieldset>
-       <center>
+        <!-- <form action="">
+            <input type="text" name="" id="">
+            <input type="submit" name="" id="">
+        </form> -->
+<!-- <form action="">
+    <input type="color" name="" id="">
+    <input type="submit" name="" id="">
+</form> -->
+        <button>click me to see the result</button>
+       <!-- <center>
      <table border="1">
         <tr>
         <th><a href="./index1.html">page1</a></th>
@@ -75,7 +87,92 @@
     </tr>
        
     
-     </table> </center>
+     </table> </center> -->
+     <script>
+        var formm=document.forms
+        formm[0].addEventListener("submit",f)
+        var res=0
+        function f(e){
+            e.preventDefault()
+            console.log(e);
+            //let res1=e.target[0].checked
+            if(e.target[0].checked){
+                res=res+5
+            }
+            else{
+                res=res+0
+            }
+      console.log(e.target[0].checked);
+        }
+        formm[1].addEventListener("submit",f1)
+        function f1(e){
+            e.preventDefault()
+            console.log(e);
+            if(e.target[1].checked){
+                res=res+5
+            }
+            else{
+                res=res+0
+            }
+      console.log(e.target[1].checked);
+        }
+        formm[2].addEventListener("submit",f2)
+        function f2(e){
+            e.preventDefault()
+            console.log(e);
+      console.log(e.target[1].checked);
+      if(e.target[1].checked){
+                res=res+5
+            }
+            else{
+                res=res+0
+            }
+        }
+        formm[3].addEventListener("submit",f3)
+        function f3(e){
+            e.preventDefault()
+            console.log(e);
+      console.log(e.target[1].checked);
+      if(e.target[1].checked){
+                res=res+5
+            }
+            else{
+                res=res+0
+            }
+        }
+        formm[4].addEventListener("submit",f4)
+        function f4(e){
+            e.preventDefault()
+            console.log(e);
+      console.log(e.target[2].checked);
+      if(e.target[2].checked){
+                res=res+5
+            }
+            else{
+                res=res+0
+            }
+        }
+
+    //     formm[5].addEventListener("submit",f5)
+    //     function f5(e){
+    //         e.preventDefault()
+    //         console.log(e);
+    //   console.log(e.target[0].value);
+    //     }
+
+ var btn=document.getElementsByTagName("button")
+ btn[0].addEventListener("click",r)
+ function r(){
+   console.log(res);
+   var h=document.createElement("h1")
+   var score=res+"/"+25
+   h.innerText="the final score is: "+score
+   document.body.append(h)
+ }
+
+
+
+     </script>
 </body>
 
 </html>
